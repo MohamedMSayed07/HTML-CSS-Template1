@@ -19,6 +19,7 @@ html {
 
 body {
     font-family: "Work Sans", sans-serif;
+    position: relative;
 }
 
 .container {
@@ -48,6 +49,30 @@ body {
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
+    }
+}
+
+.scroll-top {
+    opacity: 0;
+}
+.scroll-top.show {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    z-index: 1000000;
+    font-size: 40px;
+    color: var(--main-color);
+    animation: scroll-top .3s linear infinite;
+    cursor: pointer;
+    opacity: 1;
+}
+
+@keyframes scroll-top {
+    0%, 100% {
+        bottom: 0px;
+    }
+    50% {
+        bottom: 10px;
     }
 }
 /* End Global Rules */
