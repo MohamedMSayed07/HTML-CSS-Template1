@@ -52,8 +52,8 @@ body {
     }
 }
 
-.scroll-top {
-    opacity: 0;
+.scroll {
+    display: none;
 }
 .scroll-top.show {
     position: fixed;
@@ -64,7 +64,7 @@ body {
     color: var(--main-color);
     animation: scroll-top .3s linear infinite;
     cursor: pointer;
-    opacity: 1;
+    display: block;
 }
 
 @keyframes scroll-top {
